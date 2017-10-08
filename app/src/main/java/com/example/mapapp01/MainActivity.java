@@ -13,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button view = (Button)findViewById(R.id.view);
-        view.setOnClickListener(new View.OnClickListener(){
+        Button map = (Button)findViewById(R.id.map);
+        map.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 Intent intent = new Intent(getApplication(),MapsActivity.class);
                 startActivityForResult(intent,001);
@@ -26,6 +26,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 Intent intent = new Intent(getApplication(),InputActivity.class);
                 startActivityForResult(intent,002);
+            }
+        });
+
+        Button view = (Button)findViewById(R.id.view);
+        view.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent intent = new Intent(getApplication(),ViewActivity.class);
+                startActivityForResult(intent,003);
             }
         });
     }
